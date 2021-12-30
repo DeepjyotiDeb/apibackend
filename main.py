@@ -1,13 +1,12 @@
 from sqlalchemy import desc
-from oauth2 import get_current_user
-import schemas, models
 from fastapi import FastAPI, Depends
 from sqlalchemy.orm import Session
-from database import get_db, engine
+from . import schemas, models
+from .database import get_db, engine
 from fastapi.middleware.cors import CORSMiddleware
-from routers import authentication
+from .routers import authentication
 from fastapi import APIRouter
-from hashing import Hash
+from .hashing import Hash
 from mangum import Mangum
 
 router = APIRouter
@@ -16,6 +15,7 @@ app = FastAPI(
     )
 models.Base.metadata.create_all(engine)
 app.include_router(authentication.router)
+from .oauth21 import get_current_user
 
 origins = [
     "http://localhost",

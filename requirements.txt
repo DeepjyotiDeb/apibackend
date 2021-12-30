@@ -1,8 +1,0 @@
-pydantic
-fastapi
-sqlalchemy
-passlib[bcrypt]
-mangum
-pyjwt
-python-multipart
-python-jose
