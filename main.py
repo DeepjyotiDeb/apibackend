@@ -31,6 +31,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get('/', tags = ['blogs']) # all posts
+def sanity(db:Session = Depends(get_db)):
+    posts = db.query(models.BlogDetails).all()
+    return {
+        "posts": posts,
+        # "origins":origins
+    }
 
 @app.get('/posts', tags = ['blogs']) # all posts
 def show_posts(db:Session = Depends(get_db)):
