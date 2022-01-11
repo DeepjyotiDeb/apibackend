@@ -6,3 +6,4 @@ mangum
 pyjwt
 python-multipart
 python-jose
+uvicorn
