@@ -2,9 +2,9 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-SQLALCHEMY_DATABASE_URL = 'sqlite:///./blog.db'
+DATABASE_URL = 'postgres://objwiguqrzqucf:d4b7bdaf3facc93f5cfc2b4eebbef34022b1eef808c40ea24683324406e695ac@ec2-52-19-164-214.eu-'
 
-engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args = {"check_same_thread": False})
+engine = create_engine(DATABASE_URL, connect_args = {"check_same_thread": False})
 
 SessionLocal = sessionmaker(bind = engine, autocommit=False,autoflush= False)
 
