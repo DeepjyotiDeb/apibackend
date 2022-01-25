@@ -7,7 +7,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from routers import authentication
 from fastapi import APIRouter
 from hashing import Hash
-from mangum import Mangum
 
 router = APIRouter
 app = FastAPI(
@@ -119,5 +118,3 @@ def delete_user(id: int, db:Session = Depends(get_db),
     db.query(models.User).filter(models.User.id == id).delete(synchronize_session=False)
     db.commit()
     return "user deleted"
-
-# handler = Mangum(app)
