@@ -19,6 +19,7 @@ from oauth21 import get_current_user
 origins = [
     "http://localhost",
     "http://localhost:3000",
+    "https://main.d2f3p0xhf89vg.amplifyapp.com/"
     "https://main.dlbzvtimfz2pv.amplifyapp.com/", "*"
 ]
 
