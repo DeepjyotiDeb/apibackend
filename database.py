@@ -6,6 +6,7 @@ import urllib
 import os 
 
 DATABASE_URL = os.environ.get('DATABASE_URL')
+DATABASE_URL = DATABASE_URL[:8] + "ql" + DATABASE_URL[8:]
 # host_server = os.environ.get('host_server', 'localhost')
 # db_server_port = urllib.parse.quote_plus(str(os.environ.get('db_server_port', '5432')))
 # database_name = os.environ.get('database_name', 'fastapi')
