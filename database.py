@@ -12,7 +12,7 @@ import urllib
 # ssl_mode = urllib.parse.quote_plus(str(os.environ.get('ssl_mode','prefer')))
 # DATABASE_URL = 'postgresql://{}:{}@{}:{}/{}?sslmode={}'.format(db_username, db_password, host_server, db_server_port, database_name, ssl_mode)
 
-DATABASE_URL = 'postgresql://objwiguqrzqucf:d4b7bdaf3facc93f5cfc2b4eebbef34022b1eef808c40ea24683324406e695ac@ec2-52-19-164-214.eu-west-1.compute.amazonaws.com:5432/d90r8fbpb8achn'
+DATABASE_URL = 'postgresql://bcousmwcngxnrr:27b77cee0eded7509d078d6c5cfef835beea60c66e5140d2991e043cd0beb010@ec2-63-32-30-191.eu-west-1.compute.amazonaws.com:5432/d970v91be4husa'
 
 engine = create_engine(DATABASE_URL)
 
